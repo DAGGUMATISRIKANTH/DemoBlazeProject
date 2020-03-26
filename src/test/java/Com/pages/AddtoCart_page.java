@@ -38,7 +38,7 @@ public class AddtoCart_page {
 		a.click();
 		
 	}
-	public void Add_cart() throws IOException // Add product to the cart
+	public void Add_cart() throws IOException // Add product to the cart//screenshot
 	{
 		WebElement b=driver.findElement(By.xpath("//*[@id=\"tbodyid\"]//div[2]//div//a"));
 		b.click();
