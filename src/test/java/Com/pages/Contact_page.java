@@ -16,7 +16,7 @@ public class Contact_page {
 	WebDriver driver;
 	WebElement textbox;
 
-	public void url() 
+	public void url() //Launching Chrome browser
 	{
 	System.setProperty("webdriver.chrome.driver", "D:\\Selenium Jars\\Chrome jars\\chromedriver.exe");
 	driver = new ChromeDriver();
@@ -26,16 +26,16 @@ public class Contact_page {
 	System.out.println(driver.getTitle());
 
 	}
-	public void demoblaze_homePage()
+	public void demoblaze_homePage()//opening Demoblaze Application
 	{
 		driver.get("https://demoblaze.com/index.html");
 		System.out.println(driver.getTitle());
 	}
-	public void clickcontact()
+	public void clickcontact()//select contact option
 	{
 		driver.findElement(By.xpath("//*[@id=\"navbarExample\"]/ul/li[2]/a")).click();
 	}
-	public void details()
+	public void details()//passing sendkeys for message
 	{
 		driver.findElement(By.id("recipient-email")).sendKeys("ramya@gmail.com");
 		driver.findElement(By.id("recipient-name")).sendKeys("Ramya");
