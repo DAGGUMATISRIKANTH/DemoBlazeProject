@@ -42,7 +42,14 @@ public class AddtoCart_page {
 	{
 		WebElement b=driver.findElement(By.xpath("//*[@id=\"tbodyid\"]//div[2]//div//a"));
 		b.click();
+		Screenshot("C:\\Users\\triveni\\Desktop\\Projectframework\\src\\test\\resources\\Screenshot\\AddtoCart1.jpg");
 		
+	}
+	public void Screenshot(String path) throws IOException    //  To take screenshot
+	{
+		TakesScreenshot ts=((TakesScreenshot)driver);
+		File source=ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(source, new File(path));
 	}
 
 }
