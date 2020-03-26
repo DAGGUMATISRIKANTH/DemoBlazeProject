@@ -16,7 +16,7 @@ public class AddtoCart_page {
 	WebDriver driver;
 	WebElement textbox;
 
-	public void url() 
+	public void url() //Launching Chrome browser
 	{
 	System.setProperty("webdriver.chrome.driver", "D:\\Selenium Jars\\Chrome jars\\chromedriver.exe");
 	driver = new ChromeDriver();
@@ -26,19 +26,19 @@ public class AddtoCart_page {
 	System.out.println(driver.getTitle());
 
 	}
-	public void demoblaze_homePage()
+	public void demoblaze_homePage()//Opening Demoblaze Application
 	{
 		driver.get("https://demoblaze.com/index.html");
 		System.out.println(driver.getTitle());
 	}
 	
-	public void Select_product()
+	public void Select_product()//select the product
 	{
 		WebElement a= driver.findElement(By.xpath("//*[@id=\"tbodyid\"]//div[1]//div//div"));
 		a.click();
 		
 	}
-	public void Add_cart() throws IOException
+	public void Add_cart() throws IOException // Add product to the cart
 	{
 		WebElement b=driver.findElement(By.xpath("//*[@id=\"tbodyid\"]//div[2]//div//a"));
 		b.click();
