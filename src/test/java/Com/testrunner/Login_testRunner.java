@@ -5,11 +5,14 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/main/resources/Feature/Testcase.feature",
-plugin = {"pretty","html:reports/cucumber-html-report"},
-tags= {"@tc01_demoblazelogin,@tc02_demoblazeAddtoCart,@tc03_ContactDetails,@tc04_nextpage"},
-glue= {"steps"},
-monochrome=true
+@CucumberOptions(
+		features="features",
+		glue="stepDefinition",
+		plugin= {"html:target/cucumber-html-report",
+				"json:target/cucumber.json",
+				"pretty:target/cucumber-pretty.txt",
+				"usage:target/cucumber-usage.json",
+				"junit:target/cucumber-results.xml"}
 )
 
 public class Login_testRunner
